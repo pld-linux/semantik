@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Semantik
 Name:		semantik
 Version:	0.5.8
 Release:	1
-License:	GPL
+License:	QPL
 Group:		X11/Applications
 Source0:	http://freehackers.org/~tnagy/%{name}-%{version}.tar.bz2
 # Source0-md5:	67ea70a8f3b124d81be9d97d63383d6c
