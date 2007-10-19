@@ -18,10 +18,12 @@ BuildRequires:	QtTest-devel
 BuildRequires:	QtXml-devel
 BuildRequires:	ocaml
 BuildRequires:	python >= 2.3
+BuildRequires:	python-devel >= 2.3
 BuildRequires:	python-libs >= 2.3
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
 BuildRequires:	rpmbuild(macros) >= 1.129
+Requires:	python >= 2.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
