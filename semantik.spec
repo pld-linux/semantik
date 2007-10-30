@@ -43,10 +43,10 @@ engineers and businessmen.
 
 %build
 ./waf configure \
-	--prefix=%{_prefix} \
 %if "%{_lib}" == "lib64"
-	--use64
+	--use64 \
 %endif
+	--prefix=%{_prefix}
 ./waf
 
 %install
