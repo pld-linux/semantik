@@ -1,5 +1,5 @@
-Summary:	Semantik
-Summary(pl.UTF-8):	Semantik
+Summary:	Semantik - mindmapping-like tool
+Summary(pl.UTF-8):	Semantik - narzędzie do tworzenia map myśli
 Name:		semantik
 Version:	0.5.8
 Release:	1
@@ -19,7 +19,6 @@ BuildRequires:	QtXml-devel
 BuildRequires:	ocaml
 BuildRequires:	python >= 2.3
 BuildRequires:	python-devel >= 2.3
-BuildRequires:	python-libs >= 2.3
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
 BuildRequires:	rpmbuild(macros) >= 1.129
@@ -28,12 +27,17 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Semantik (previously Kdissert) is a mindmapping-like tool to help
-students to produce complicated documents very quickly and efficiently
-: presentations, dissertations, thesis, reports. While targetted
-mostly at students, Kdissert can also help teachers, decision maker,
-engineers and businessmen.
+students to produce complicated documents very quickly and
+efficiently: presentations, dissertations, thesis, reports. While
+targetted mostly at students, Semantik can also help teachers,
+decision maker, engineers and businessmen.
 
-#%description -l pl.UTF-8
+%description -l pl.UTF-8
+Semantik (wcześniej znane jako Kdissert) to narzędzie do tworzenia map
+myśli, pomagający uczniom bardzo szybko tworzyć skomplikowane
+dokumenty, takie jak prezentacje, rozprawy, raporty. Jest skierowany
+głównie do uczniów, ale może także pomóc nauczycielom, osobom
+podejmującym decyzje, inżynierom i biznesmenom.
 
 %prep
 %setup -q
@@ -56,6 +60,9 @@ DESTDIR=$RPM_BUILD_ROOT ./waf install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
