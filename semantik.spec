@@ -43,7 +43,7 @@ podejmującym decyzje, inżynierom i biznesmenom.
 %setup -q
 # this is so ugly, someone please shoot me, but there is no other way to patch that thing :/
 ./waf --help >/dev/null
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 ./waf configure \
